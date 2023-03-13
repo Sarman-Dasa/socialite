@@ -37,6 +37,12 @@ Route::middleware('guest')->group(function () {
     
     Route::get('/github/redirect',[LoginWithSocialiteController::class,'githubRedirect'])->name('login.githubRedirect');
     Route::get('/github/callback',[LoginWithSocialiteController::class,'githubCallback'])->name('login.githubCallback');
+
+    Route::get('/google/redirect', [LoginWithSocialiteController::class, 'redirectToGoogle']);
+    Route::get('/google/callback', [LoginWithSocialiteController::class, 'GoogleCallback']);
+
+    Route::get('/linkedin/redirect', [LoginWithSocialiteController::class, 'redirectTolinkedin']);
+    Route::get('/linkedin/callback', [LoginWithSocialiteController::class, 'linkedinCallback']);
 });
 
 Route::middleware('auth')->group(function () {
