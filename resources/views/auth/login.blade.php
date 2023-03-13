@@ -43,17 +43,18 @@
                 {{ __('Log in') }}
             </x-primary-button>
         </div>
-        <div class="flex items-center justify-end mt-4">
+
+        <div class="flex items-center justify-center mt-4">
             <a href="{{ url('/github/redirect') }}" style="
-                text-decoration: none;
-                font-family: helvetica;
-                font-weight: bold;
-                color: #ddd;
-                background-color: black;
-                height: 30px;
-                display: flex;
-                padding: 5px;
-                border-radius: 5px;" >
+                    text-decoration: none;
+                    font-family: helvetica;
+                    font-weight: bold;
+                    color: #ddd;
+                    background-color: black;
+                    height: 41px;
+                    display: flex;
+                    padding: 9px;
+                    border-radius: 5px;" >
             <svg xmlns="http://www.w3.org/2000/svg"
             aria-label="GitHub" role="img"
             viewBox="0 0 512 512" style="width: 30px; vertical-align: middle; border-right:0.5px solid #aaa;">
@@ -62,6 +63,19 @@
             </svg>
             <span style="">Log in with GitHub</span>
             </a>
+        </div>
+        
+        <div class="flex items-center justify-center mt-5">
+            <a href="{{ url('/google/redirect') }}">
+                <img src="https://developers.google.com/identity/images/btn_google_signin_dark_normal_web.png">
+            </a>
+        </div>
+
+        <div class="flex items-center justify-center mt-5">
+            <a class="btn" href="{{ url('/linkedin/redirect') }}">
+                <img src="https://content.linkedin.com/content/dam/developer/global/en_US/site/img/signin-button.png" alt="">
+            </a>
+            
         </div>
     </form>
 </x-guest-layout>
